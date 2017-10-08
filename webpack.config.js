@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  entry: './public/app.js',
+  entry: './public/javascript/app.js',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public', 'dist'),
@@ -43,5 +43,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ExtractTextPlugin('style.css'), new UglifyJSPlugin()],
+  plugins: [new ExtractTextPlugin('style.css'), new UglifyJSPlugin({ sourceMap: true })],
 };

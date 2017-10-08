@@ -3,8 +3,13 @@ html
   head
     title= `Hello`
     link(rel='stylesheet', href='/dist/style.css')
-    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+  body  
+  include nav.pug
 
-block content
-  h1 hello world
+  block content
+    .container
+      h1 hello world
+      button Click Me
+
+    script(src='/dist/main.bundle.js')
