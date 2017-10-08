@@ -1,16 +1,17 @@
 button {
-  background-color: $dark-grey;
   width: 8rem;
   height: 3rem;
   padding: 0.5rem;
   border: none;
   color: invert($dark-grey);
-
-  &:hover {
-    background-color: lighten($dark-grey, 10);
-    color: #fff;
-  }
-  &:focus {
-    outline: none;
+  &.dark {
+    background-color: $dark-grey;
+    &:hover {
+      background-color: lighten($dark-grey, 10);
+      color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }

@@ -1,18 +1,19 @@
 import '../sass/main.scss';
 
-const callback = function () {
+const callback = function onReady() {
   const openButton = document.getElementById('openNav');
   const closeButton = document.getElementById('closeNav');
-
-  openButton.addEventListener('click', openNav);
-  closeButton.addEventListener('click', closeNav);
 
   function openNav() {
     document.querySelector('.sidenav').style.width = '80%';
   }
+
   function closeNav() {
     document.querySelector('.sidenav').style.width = '0';
   }
+
+  openButton.addEventListener('click', openNav);
+  closeButton.addEventListener('click', closeNav);
 };
 
 if (

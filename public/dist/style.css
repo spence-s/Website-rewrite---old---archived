@@ -394,17 +394,18 @@ template {
   display: none; }
 
 button {
-  background-color: #333333;
   width: 8rem;
   height: 3rem;
   padding: 0.5rem;
   border: none;
   color: #cccccc; }
-  button:hover {
-    background-color: #4d4d4d;
-    color: #fff; }
-  button:focus {
-    outline: none; }
+  button.dark {
+    background-color: #333333; }
+    button.dark:hover {
+      background-color: #4d4d4d;
+      color: #fff; }
+    button.dark:focus {
+      outline: none; }
 
 .container {
   width: 100%;
@@ -457,5 +458,12 @@ button {
     right: 25px;
     font-size: 36px;
     margin-left: 50px; }
+
+.openbtn {
+  position: fixed;
+  border: none;
+  background-color: #111;
+  top: 0;
+  left: 0; }
 
 /*# sourceMappingURL=style.css.map*/
