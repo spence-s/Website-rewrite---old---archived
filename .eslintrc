@@ -4,6 +4,7 @@
   "node":                 true
   },
 "rules":                  {
-  "import/no-unresolved": [2, { "caseSensitive":false }]
+  "import/no-unresolved": [2, { "caseSensitive":false }],
+  "no-console":           "off"
   }
 }

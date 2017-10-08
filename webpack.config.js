@@ -41,6 +41,15 @@ module.exports = {
           ],
         }),
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[name].[ext]' },
+          },
+        ],
+      },
     ],
   },
   plugins: [new ExtractTextPlugin('style.css'), new UglifyJSPlugin({ sourceMap: true })],

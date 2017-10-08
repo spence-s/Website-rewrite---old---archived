@@ -1,26 +1,9 @@
 import '../sass/main.scss';
+import documentReady from './ready';
+import nav from './nav';
 
-const callback = function onReady() {
-  const openButton = document.getElementById('openNav');
-  const closeButton = document.getElementById('closeNav');
-
-  function openNav() {
-    document.querySelector('.sidenav').style.width = '80%';
-  }
-
-  function closeNav() {
-    document.querySelector('.sidenav').style.width = '0';
-  }
-
-  openButton.addEventListener('click', openNav);
-  closeButton.addEventListener('click', closeNav);
-};
-
-if (
-  document.readyState === 'complete' ||
-  (document.readyState !== 'loading' && !document.documentElement.doScroll)
-) {
-  callback();
-} else {
-  document.addEventListener('DOMContentLoaded', callback);
-}
+// start javascript here
+documentReady(() => {
+  console.log('Document is ready to be operated on! \nNurse!,pass me the scalpal!');
+  nav(document.getElementById('openNav'));
+});
