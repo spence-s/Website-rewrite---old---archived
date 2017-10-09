@@ -1,7 +1,4 @@
 button {
-  width: 8rem;
-  height: 3rem;
-  padding: 0.5rem;
   border: none;
   color: invert($dark-grey);
   &.dark {
@@ -10,8 +7,15 @@ button {
       background-color: lighten($dark-grey, 10);
       color: #fff;
     }
-    &:focus {
-      outline: none;
-    }
   }
+  &:focus {
+    outline: none;
+  }
+}
+
+.drawer-btn {
+  position: fixed;
+  background-color: white;
+  color: $dark-grey;
+  margin: 1rem;
 }

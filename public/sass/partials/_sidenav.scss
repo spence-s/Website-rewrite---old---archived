@@ -2,16 +2,17 @@
   height: 100%;
   width: 0;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
-  padding-top: 60px;
+  padding: 10% 0;
   transition: 0.5s;
-  & a,
-  button {
-    padding: 8px 8px 8px 32px;
+  & a {
     text-align: center;
     text-decoration: none;
     font-size: 25px;
@@ -30,18 +31,9 @@
   & .closebtn {
     position: absolute;
     border: none;
-    background-color: #111;
+    background-color: transparent;
+    margin: 1rem;
     top: 0;
     right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
   }
-}
-
-.openbtn {
-  position: fixed;
-  border: none;
-  background-color: #111;
-  top: 0;
-  left: 0;
 }

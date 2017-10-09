@@ -15,6 +15,26 @@ app.get('/', (req, res) => {
   res.render('layout');
 });
 
+app.get('/api', (req, res) => {
+  res.json([
+    {
+      text: '1',
+    },
+    {
+      text: '2',
+    },
+    {
+      text: '3',
+    },
+    {
+      text: '4',
+    },
+    {
+      text: '5',
+    },
+  ]);
+});
+
 app.listen(3000, () => {
   if (process.env.NODE_ENV === 'development') {
     console.log('App listening on 3000!');
