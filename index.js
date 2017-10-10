@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('layout');
+  res.render('home', { title: 'Home' });
 });
 
 app.get('/api', (req, res) => {

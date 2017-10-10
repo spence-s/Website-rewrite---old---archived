@@ -1,21 +1,29 @@
-button {
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
   border: none;
-  color: invert($dark-grey);
-  &.dark {
-    background-color: $dark-grey;
-    &:hover {
-      background-color: lighten($dark-grey, 10);
-      color: #fff;
-    }
-  }
-  &:focus {
+  padding: 10px;
+  outline: none;
+  margin: 5px 10px;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
     outline: none;
+    box-shadow: 3px 3px 0 0;
   }
 }
 
 .drawer-btn {
+  @extend .btn;
   position: fixed;
   background-color: white;
-  color: $dark-grey;
+  color: $gray-800;
   margin: 1rem;
 }

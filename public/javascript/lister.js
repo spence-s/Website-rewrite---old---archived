@@ -3,10 +3,10 @@ import axios from 'axios';
 const getData = async () => {
   const data = await axios.get('/api');
   console.log(data);
-  data.data.forEach((elem) => {
-    document
-      .querySelector('.container')
-      .appendChild(document.createElement('li').appendChild(document.createTextNode(elem.text)));
+  data.data.forEach((elemData) => {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(elemData.text));
+    document.querySelector('.container').appendChild(div);
   });
 };
 
