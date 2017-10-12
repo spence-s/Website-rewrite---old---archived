@@ -2728,7 +2728,7 @@ template {
 [hidden] {
   display: none; }
 
-.btn, .drawer-btn {
+.btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -2739,19 +2739,21 @@ template {
       -ms-user-select: none;
           user-select: none;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   outline: none;
   margin: 5px 10px; }
-  .btn:hover, .drawer-btn:hover, .btn.hover, .hover.drawer-btn, .btn:focus, .drawer-btn:focus, .btn.focus, .focus.drawer-btn, .btn:active, .drawer-btn:active, .btn.active, .active.drawer-btn {
+  .btn:hover, .btn.hover, .btn:focus, .btn.focus, .btn:active, .btn.active {
     outline: none;
-    -webkit-box-shadow: 3px 3px 0 0;
-            box-shadow: 3px 3px 0 0; }
-
-.drawer-btn {
-  position: fixed;
-  background-color: white;
-  color: #343a40;
-  margin: 1rem; }
+    -webkit-box-shadow: 1px 2px 2px #495057;
+            box-shadow: 1px 2px 2px #495057; }
+  .btn.btn-drawer {
+    position: fixed;
+    background-color: white;
+    color: #343a40;
+    margin: 1rem; }
+    .btn.btn-drawer:hover, .btn.btn-drawer:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
 
 .container {
   width: 100%;
@@ -2887,13 +2889,20 @@ template {
   .sidenav .offcanvas,
   .sidenav :focus {
     color: #f1f1f1;
-    outline: 0; }
+    border: none;
+    outline: none; }
   .sidenav .closebtn {
+    outline: none;
     position: absolute;
     border: none;
     background-color: transparent;
     margin: 1rem;
     top: 0;
     right: 25px; }
+    .sidenav .closebtn :hover,
+    .sidenav .closebtn :focus {
+      color: black;
+      outline: none;
+      border: none; }
 
 /*# sourceMappingURL=style.css.map*/

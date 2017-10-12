@@ -25,15 +25,23 @@
   & .offcanvas,
   & :focus {
     color: #f1f1f1;
-    outline: 0;
+    border: none;
+    outline: none;
   }
 
   & .closebtn {
+    outline: none;
     position: absolute;
     border: none;
     background-color: transparent;
     margin: 1rem;
     top: 0;
     right: 25px;
+    & :hover,
+    & :focus {
+      color: black;
+      outline: none;
+      border: none;
+    }
   }
 }

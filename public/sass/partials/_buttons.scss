@@ -6,7 +6,7 @@
   vertical-align: middle;
   user-select: none;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   outline: none;
   margin: 5px 10px;
   &:hover,
@@ -16,14 +16,18 @@
   &:active,
   &.active {
     outline: none;
-    box-shadow: 3px 3px 0 0;
+    box-shadow: 1px 2px 2px $gray-700;
   }
-}
-
-.drawer-btn {
-  @extend .btn;
-  position: fixed;
-  background-color: white;
-  color: $gray-800;
-  margin: 1rem;
+  // btn btn-drawer
+  &.btn-drawer {
+    position: fixed;
+    background-color: white;
+    color: $gray-800;
+    margin: 1rem;
+    &:hover,
+    &:focus {
+      // remove box-shadow
+      box-shadow: none;
+    }
+  }
 }
