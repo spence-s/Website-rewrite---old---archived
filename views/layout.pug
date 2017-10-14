@@ -14,9 +14,10 @@ html.no-js(lang="en")
   body
     include partials/nav
 
-    .container
-      include partials/flash
-      block content
+    #barba-wrapper
+      .barba-container.container
+        include partials/flash
+        block content
 
     include partials/footer
 
